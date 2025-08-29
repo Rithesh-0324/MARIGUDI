@@ -1,3 +1,8 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 h1{
     text-align: center;
     margin: 0px;
@@ -51,6 +56,20 @@ main :hover{
     top : 0;
     inline-size: 100%;
     background-color: rgb(45, 251, 148);
+}
+.navbar .dropdown {
+    position: relative;
+    display: inline-block;
+}
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(45, 251, 148);
+    min-inline-size: 160px;
+    z-index: 1;
+}
+.navbar:hover .dropdown-content {
+    display: block;
 }
 p{
     text-align: justify;

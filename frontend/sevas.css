@@ -1,5 +1,8 @@
 body{
     background-color: rgb(169, 210, 245);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 h3{
     color:yellow;
@@ -73,3 +76,4 @@ main :hover{
 P{
     margin:0 auto;
 }
+

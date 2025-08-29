@@ -1,3 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    inline-size: 100%;
+}
+h2{
+    inline-size: 100%;
+    background-color: rgb(228, 210, 51);
+    color: white;
+}
+h1{
+    inline-size: 100%;
+    background-color: rgb(31, 31, 100);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
+
 .navbar ul{
         list-style-type: none;
         padding: 3% ;
@@ -39,4 +59,87 @@ main :hover{
     top : 0;
     inline-size: 100%;
     background-color: rgb(45, 251, 148);
+}
+h1{
+    background-color: rgb(31, 31, 100);
+}
+.form{
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+#name{
+    display: inline-block;
+    margin: 0px;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-color: chocolate;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#email{
+    display: inline-block;
+    margin: 0px;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-color: brown;
+}
+#message{
+    display: inline-block;
+    margin: 5px;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-color: cornflowerblue;
+}
+#submit{
+    display: inline-block;
+    margin: 30px;
+    padding:25px;
+    inline-size: fit-content;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(231, 97, 97, 0.5);
+    border-color: darkcyan;
+    background-color: rgba(22, 121, 49, 0.873);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transition-duration: 2s;
+    &:hover {
+        background-color: rgba(178, 236, 21, 0.973);
+        color: black;
+    }
+
+}
+.animated-border{
+    border:4px solid transparent;
+    border-radius:12px;
+    padding:20px;
+    background:linear-gradient(#ffffff,#fafafa) padding-box,linear-gradient(90deg,red,orange,yellow,green,blue,indigo,violet) border-box;
+    background-size: 200% 200%;
+    animation:bordermove 10s linear infinite;
+
+}
+@keyframes bordermove{
+    0%{
+        background:linear-gradient((#fff,#fff) padding-box,linear-gradient(90deg,red,orange,yellow,green,blue,indigo,violet) border-box);
+        background-position:0% 50%;
+    }
+    100%{
+        background:linear-gradient((#fff,#fff) padding-box,linear-gradient(450deg,violet,indigo,blue,green,yellow,orange,red) border-box);
+        background-position:100% 50%;
+    }
+}
+.contact-info{
+    padding: 2%;
+    list-style-type: none;
+}
+footer{
+    background-color:#333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    display: sticky;
 }
