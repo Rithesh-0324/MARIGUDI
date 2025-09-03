@@ -1,66 +1,74 @@
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: slideUp 1.5s ease-out forwards;
 }
-h1{
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
     text-align: center;
-    margin: 0px;
+    margin: 0;
     background-color: tomato;
-    inline-size:100%;
+    padding: 20px;
+    color: white;
 }
-h2{
+
+h2 {
     background-color: lightblue;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
 }
-.navbar ul{
-        list-style-type: none;
-        padding: 3% ;
-        margin: 0;
-        background-color:rgb(45, 47, 46);
-        overflow:hidden;
-        padding:0;
-        margin:0;
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(45, 47, 46);
+    overflow: hidden;
 }
-main{
-    margin: 30px;
-    margin-inline-start: 20px;
-    margin-inline-end: 20px;
-    background-attachment: fixed;
-    
+
+.navbar li {
+    float: inline-start;
 }
-main :hover{
-    color: rgb(0, 0, 0);
-}
-.navbar a{
+
+.navbar a {
     text-decoration: none;
-    color:rgb(71, 147, 214);
+    color: rgb(71, 147, 214);
     padding: 20px;
-    display:block;
+    display: block;
     text-align: center;
 }
-.navbar a:hover{
+
+.navbar a:hover {
     background-color: rgb(226, 217, 217);
     color: rgb(0, 0, 0);
     border-block-end: 5px solid rgb(234, 142, 36);
     border-radius: 20px;
 }
-.navbar li{
-    margin-inline-end: 20px;
-    float: inline-start;
-}
-.navbar{
+
+.navbar {
     position: sticky;
-    top : 0;
+    inset-block-start: 0;
     inline-size: 100%;
     background-color: rgb(45, 251, 148);
+    z-index: 10;
 }
+
 .navbar .dropdown {
     position: relative;
     display: inline-block;
 }
+
 .navbar .dropdown-content {
     display: none;
     position: absolute;
@@ -68,10 +76,21 @@ main :hover{
     min-inline-size: 160px;
     z-index: 1;
 }
-.navbar:hover .dropdown-content {
+
+.navbar .dropdown:hover .dropdown-content {
     display: block;
 }
-p{
+
+main {
+    margin: 30px 20px;
+    background-attachment: fixed;
+}
+
+main:hover {
+    color: rgb(0, 0, 0);
+}
+
+p {
     text-align: justify;
     font-size: 1.2em;
     line-height: 1.5em;
@@ -80,57 +99,30 @@ p{
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
 }
+
 .social-icons {
     display: flex;
     margin-block-start: 20px;
     background-color: rgba(61, 52, 57, 0.8);
-    border-radius: 0px;
-    padding: 100px;
-    justify-content: space-between;
+    padding: 40px;
+    justify-content: center;
+    gap: 15px;
+}
 
-}
-.fab.fa-facebook-f {
+.social-icons i {
     color: white;
-    margin: 0 10px;
     font-size: 24px;
-    background-color: blue;
-    padding: 10px;
-    border-radius: 5px;
-}
-.fab.fa-twitter {
-    color: rgb(238, 236, 244);
-    margin: 0 10px;
-    font-size: 24px;
-    background-color: rgb(104, 104, 229);
-    padding:10px;
-    border-radius:10px;
-}
-.fab.fa-instagram {
-    color: white;
-    margin: 0 10px;
-    font-size: 24px;
-    background-color:red;
-    padding: 10px;
-    border-radius: 10px;
-}
-.fab.fa-linkedin-in {
-    color: white;
-    margin: 0 10px;
-    font-size: 24px;
-    background-color: rgb(0, 119, 181);
-    padding: 10px;
-    border-radius: 10px;
-    margin-inline-start: 0;
-}
-.fab.fa-youtube {
-    color: white;
-    margin: 0 10px;
-    font-size: 24px;
-    background-color: rgb(255, 0, 0);
-    padding: 10px;
-    border-radius: 10px;
-}
-.social-icons :hover {
-    transform: scale(1.1);
+    padding: 12px;
+    border-radius: 8px;
     transition: transform 0.8s;
 }
+
+.social-icons i:hover {
+    transform: scale(1.1);
+}
+
+.fa-facebook-f { background-color: blue; }
+.fa-twitter { background-color: rgb(104, 104, 229); }
+.fa-instagram { background-color: red; }
+.fa-linkedin-in { background-color: rgb(0, 119, 181); }
+.fa-youtube { background-color: rgb(255, 0, 0); }

@@ -5,12 +5,33 @@ html,body{
     padding: 0;
     font-family: Arial, sans-serif;
     margin-block-start: 0px;
+    opacity: 0;
+    transform:translateY(100px);
+    animation:slideUp 0.8s ease-out forwards;
+}
+@keyframes slideUp{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#header-image{
+    inline-size: 5%;
+    block-size:100px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 50%;
 }
 h1{
     text-align: center;
-    margin: 0%;;
-    background-color: rgb(252, 98, 98);
+    margin: 0%;
     border-width: 0%;
+}
+.header{
+    background: url('bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .navbar ul{
         list-style-type: none;
@@ -122,7 +143,7 @@ img{
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 18px;
         color: rgb(0, 0, 0);
-        width:30%;
+        inline-size:30%;
     }
     .header{
     text-align: center;
@@ -146,3 +167,29 @@ img{
         flex-direction: column;
         display:flex;
     }
+    .social-icons {
+    display: flex;
+    margin-block-start: 20px;
+    background-color: rgba(61, 52, 57, 0.8);
+    padding: 40px;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons i {
+    color: white;
+    font-size: 24px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: transform 0.8s;
+}
+
+.social-icons i:hover {
+    transform: scale(1.1);
+}
+
+.fa-facebook-f { background-color: blue; }
+.fa-twitter { background-color: rgb(104, 104, 229); }
+.fa-instagram { background-color: red; }
+.fa-linkedin-in { background-color: rgb(0, 119, 181); }
+.fa-youtube { background-color: rgb(255, 0, 0); }
